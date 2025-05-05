@@ -1,8 +1,11 @@
-def fibonacci(n):
-    fib_sequence = [0, 1]  
-    for i in range(2, n):
-        fib_sequence.append(fib_sequence[i - 1] + fib_sequence[i - 2])
-    return fib_sequence[:n] 
+def fibonacci_series(n):
+    a, b = 0, 1 
+    print(a, b, end=" ")  
+    for i in range(n - 2):  
+        next_term = a + b
+        print(next_term, end=" ")
+        a, b = b, next_term  
 
 n = int(input("Enter the number of terms: "))
-print("Fibonacci sequence:", fibonacci(n))
+print("Fibonacci series:")
+fibonacci_series(n)
