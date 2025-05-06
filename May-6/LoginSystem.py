@@ -16,4 +16,4 @@ try:
     password = input("Password: ")
     login(username,password)
 except Exception as e:
-    print ("An Error Occured : {e}")
+    print (f"An Error Occured : {e}")
